@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Room Service System | Public Showcase</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Public-safe frontend showcase</p>
+          <h1>Smart Room Service System</h1>
+          <p class="hero-text">
+            A private hospitality product that connects guest room ordering,
+            supplier coordination, courier flow, and admin visibility. This
+            repository only publishes a minimal frontend sample so viewers can
+            understand the product direction without accessing private code.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#preview">Open Preview</a>
+            <a class="button button-secondary" href="./README.md">Read Scope</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="metric-card">
+            <span class="metric-label">Published here</span>
+            <strong class="metric-value">Frontend sample only</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Excluded</span>
+            <strong class="metric-value">Backend, auth, secrets</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Data source</span>
+            <strong class="metric-value">Mock data</strong>
+          </div>
+        </aside>
+      </header>
+
+      <section class="security-strip">
+        <div class="strip-item">No backend code</div>
+        <div class="strip-item">No environment files</div>
+        <div class="strip-item">No live endpoints</div>
+        <div class="strip-item">No customer data</div>
+      </section>
+
+      <main id="preview" class="content-grid">
+        <section class="story-card">
+          <p class="section-kicker">System surface</p>
+          <h2>What the private product covers</h2>
+          <div class="story-list">
+            <article>
+              <h3>Guest room menu</h3>
+              <p>
+                QR-based ordering flow for hotel guests with category browsing,
+                item detail views, cart actions, and a checkout path.
+              </p>
+            </article>
+            <article>
+              <h3>Operations board</h3>
+              <p>
+                Task visibility for restaurants or suppliers with status-based
+                work queues, order contents, timing, and action states.
+              </p>
+            </article>
+            <article>
+              <h3>Admin visibility</h3>
+              <p>
+                Revenue summaries, order volume, and hotel or supplier
+                performance insights presented in a management dashboard.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="preview-card">
+          <div class="preview-header">
+            <div>
+              <p class="section-kicker">Example screens</p>
+              <h2>Representative frontend preview</h2>
+            </div>
+            <div class="tab-list" role="tablist" aria-label="Preview tabs">
+              <button class="tab is-active" data-target="guest" type="button">
+                Guest Menu
+              </button>
+              <button class="tab" data-target="ops" type="button">
+                Ops Board
+              </button>
+              <button class="tab" data-target="admin" type="button">
+                Admin View
+              </button>
+            </div>
+          </div>
+
+          <div class="panel is-active" data-panel="guest">
+            <div class="phone-frame">
+              <div class="phone-header">
+                <span>Room 804</span>
+                <span>Menu Preview</span>
+              </div>
+              <div class="category-row">
+                <span class="pill is-active">Breakfast</span>
+                <span class="pill">Dessert</span>
+                <span class="pill">Drinks</span>
+              </div>
+              <div class="product-stack">
+                <article class="product-card">
+                  <div class="product-art art-breakfast"></div>
+                  <div class="product-copy">
+                    <h3>Signature Breakfast Tray</h3>
+                    <p>Eggs, simit, fruit, tea service</p>
+                    <div class="product-footer">
+                      <strong>18.00 AZN</strong>
+                      <button type="button">Add</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="product-card">
+                  <div class="product-art art-dessert"></div>
+                  <div class="product-copy">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Warm center, vanilla cream</p>
+                    <div class="product-footer">
+                      <strong>9.50 AZN</strong>
+                      <button type="button">Add</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" data-panel="ops">
+            <div class="board-grid">
+              <article class="board-column">
+                <header>
+                  <span class="column-dot dot-amber"></span>
+                  <h3>Pending</h3>
+                </header>
+                <div class="task-card">
+                  <strong>Order #1842</strong>
+                  <p>2x Club Sandwich, 1x Ayran</p>
+                  <small>Created 2 min ago</small>
+                </div>
+                <div class="task-card">
+                  <strong>Order #1843</strong>
+                  <p>1x Caesar Salad, 1x Espresso</p>
+                  <small>Created 5 min ago</small>
+                </div>
+              </article>
+              <article class="board-column">
+                <header>
+                  <span class="column-dot dot-blue"></span>
+                  <h3>Preparing</h3>
+                </header>
+                <div class="task-card">
+                  <strong>Order #1838</strong>
+                  <p>1x Burger Menu, 2x Cola</p>
+                  <small>Prep timer running</small>
+                </div>
+              </article>
+              <article class="board-column">
+                <header>
+                  <span class="column-dot dot-green"></span>
+                  <h3>Ready</h3>
+                </header>
+                <div class="task-card">
+                  <strong>Order #1835</strong>
+                  <p>1x Fruit Plate, 1x Water</p>
+                  <small>Courier pickup available</small>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel" data-panel="admin">
+            <div class="admin-grid">
+              <article class="admin-metric">
+                <span>Total revenue</span>
+                <strong data-counter="18420">0</strong>
+              </article>
+              <article class="admin-metric">
+                <span>Total orders</span>
+                <strong data-counter="1264">0</strong>
+              </article>
+              <article class="admin-metric">
+                <span>Avg. basket</span>
+                <strong data-counter="14.6">0</strong>
+              </article>
+            </div>
+            <div class="admin-chart">
+              <div class="chart-bars">
+                <span style="height: 34%"></span>
+                <span style="height: 48%"></span>
+                <span style="height: 43%"></span>
+                <span style="height: 67%"></span>
+                <span style="height: 74%"></span>
+                <span style="height: 86%"></span>
+                <span style="height: 72%"></span>
+              </div>
+              <div class="chart-axis">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="story-card code-card">
+          <p class="section-kicker">Sample files</p>
+          <h2>Representative code samples</h2>
+          <ul class="sample-links">
+            <li>
+              <a href="./samples/react/GuestMenuSample.jsx">
+                samples/react/GuestMenuSample.jsx
+              </a>
+            </li>
+            <li>
+              <a href="./samples/react/OperationsBoardSample.jsx">
+                samples/react/OperationsBoardSample.jsx
+              </a>
+            </li>
+            <li>
+              <a href="./samples/react/AdminOverviewSample.jsx">
+                samples/react/AdminOverviewSample.jsx
+              </a>
+            </li>
+            <li>
+              <a href="./samples/data/mockData.js">
+                samples/data/mockData.js
+              </a>
+            </li>
+          </ul>
+          <p class="note">
+            These files are sanitized examples. They are not connected to live
+            services and do not reveal backend implementation.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
